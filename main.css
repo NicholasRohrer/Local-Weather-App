@@ -1,0 +1,19 @@
+body {
+    background-color: #009688;
+}
+
+.buttons {
+    float: right;
+    margin-top: 50px;
+    margin-right: 100px;
+}
+
+.text {
+    color: #E0F2F1;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.credits {
+    color: #A7FFEB;
+}
