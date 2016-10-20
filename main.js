@@ -11,17 +11,22 @@ $( document ).ready(function() {
     var theCity = "";
     var theState = "";
     var theWeather = "";
-    var lat = 0;
-    var long = 0;
+    var lat;
+    var long;
 
+    // get user's city, state, and lat and long
     $.getJSON('http://ipinfo.io', function(data){
-    console.log(data);
-    theCity = data.city;
-    theState = data.region;
-    locArray = data.loc.split(",");
-    lat = locArray[0]; 
-    long = locArray[1];
-    console.log(lat);
-    console.log(long);
-})
+	    console.log(data);
+	    theCity = data.city;
+	    theState = data.region;
+	    locArray = data.loc.split(",");
+	    lat = locArray[0]; 
+	    long = locArray[1];
+	    console.log(lat);
+	    console.log(long);
+	})
+
+    $.getJSON('https://api.darksky.net/forecast/ee7f8c5319292e0f2d3c2a15f2e0327e/' + lat + "," + long, function(data){
+    	console.log(data);
+    })
 });
