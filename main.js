@@ -11,8 +11,8 @@ $( document ).ready(function() {
     var theCity = "";
     var theState = "";
     var theWeather = "";
-    var lat;
-    var long;
+    var lat = 0;
+    var long = 0;
 
     // get user's city, state, and lat and long
     $.getJSON('http://ipinfo.io', function(data){
