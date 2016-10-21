@@ -34,8 +34,14 @@ function getLoc() {
 
 	    // grab weather for user's location
 	    $.getJSON('http://api.openweathermap.org/data/2.5/weather?lat='+ lat + '&lon=' + lon + '&appid=8a10021e7f41b82c85ebfa59a6ecabd5&callback=?', function(data){
+
 	        // display data for testing
 	        console.log(data);
+
+	        var theTemp = Math.ceil(data.main['temp'] * (9/5) - 459.67);
+	        // grab user temp and weather description
+	        $myTemp.html(theTemp);
+	        $myWeather.html();
 	    })
         
     })
