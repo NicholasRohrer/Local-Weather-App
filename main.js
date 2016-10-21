@@ -14,6 +14,9 @@ var theWeather = "";
 var lat = 0;
 var lon = 0;
 
+// if unit = 0, unit is degrees F. unit = 1 = degrees C
+var unit = 0;
+
 // get user's city, state, and lat and long
 function getLoc() {
     $.getJSON('http://ip-api.com/json/?callback=?', function(data){
@@ -40,12 +43,20 @@ function getLoc() {
 
 	        var theTemp = Math.ceil(data.main['temp'] * (9/5) - 459.67);
 	        // grab user temp and weather description
-	        $myTemp.html(theTemp);
-	        $myWeather.html();
-	    })
-        
+	        $myTemp.html(theTemp + ' &degF');
+	        $myWeather.html(data.weather[0].description);
+	   
+        })
     })
 }
 
+function toCelsius(){
+	// check the units
+	if (unit === 1) {
+		return;
+	} 
+
+
+}
+
 getLoc();
-//getWeather();
