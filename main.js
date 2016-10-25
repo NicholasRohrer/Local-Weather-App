@@ -7,12 +7,14 @@ var $myTemp = $('#temp');
 var $myWeather = $('#weather');
 var $degFButton = $('#degF');
 var $degCButton = $('#degC');
+var $weatherIcon = $('#weatherIcon');
 
 // variables
 var degF = 0;
 var degC = 0;
 var lat = 0;
 var lon = 0;
+var iconCode = 0;
 
 // if unit = 0, unit is degrees F. unit = 1 = degrees C
 var unit = 0;
@@ -28,21 +30,23 @@ function getLoc() {
 	    // grab weather for user's location
 	    $.getJSON('http://api.openweathermap.org/data/2.5/weather?lat='+ lat + '&lon=' + lon + '&appid=8a10021e7f41b82c85ebfa59a6ecabd5&callback=?', function(data2){
 
-	        // display data for testing
-	       	console.log(data2);
-
 	        // convert Kelvin to degrees F
 	        degF = Math.ceil(data2.main['temp'] * (9/5) - 459.67);
-	        // convert Kelvin to degrees C
-	        degC = Math.ceil(data2.main['temp'] - 273.15)
 
+	        // convert Kelvin to degrees C
+	        degC = Math.ceil(data2.main['temp'] - 273.15);
+
+	        // get weather icon code
+	        iconCode = data2.weather[0].icon;
+
+	        // display city, state, temp, weather, and icon to page
 	        $myCity.html(data1.city + ", ");
 	    	$myState.html(data1.regionName);
-	        // display weather description and degF by default for user
 	        $myTemp.html(degF + ' &degF');
 	        $myWeather.html(data2.weather[0].description);
+	        $weatherIcon.attr("src", "http://openweathermap.org/img/w/" + iconCode + ".png");
 
-	        // change units on click of button
+	        // change units on click of the buttons
 	        $degCButton.on('click', function(){
 	        	if (unit === 0) {
 	        		unit = 1;

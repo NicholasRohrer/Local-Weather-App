@@ -17,3 +17,8 @@ body {
 .credits {
     color: #A7FFEB;
 }
+
+#weatherIcon {
+	height: 5em;
+	width: 5em;
+}
