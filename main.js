@@ -21,14 +21,14 @@ var unit = 0;
 
 // get user's city, state, and lat and long
 function getLoc() {
-    $.getJSON('https://ip-api.com/json/?callback=?', function(data1){
+    $.getJSON('http://ip-api.com/json/?callback=?', function(data1){
 
 	    // grab user coordinates
 	    lat = data1.lat; 
 	    lon = data1.lon;
 
 	    // grab weather for user's location
-	    $.getJSON('https://api.openweathermap.org/data/2.5/weather?lat='+ lat + '&lon=' + lon + '&appid=8a10021e7f41b82c85ebfa59a6ecabd5&callback=?', function(data2){
+	    $.getJSON('http://api.openweathermap.org/data/2.5/weather?lat='+ lat + '&lon=' + lon + '&appid=8a10021e7f41b82c85ebfa59a6ecabd5&callback=?', function(data2){
 
 	        // convert Kelvin to degrees F
 	        degF = Math.ceil(data2.main['temp'] * (9/5) - 459.67);
@@ -44,7 +44,7 @@ function getLoc() {
 	    	$myState.html(data1.regionName);
 	        $myTemp.html(degF + ' &degF');
 	        $myWeather.html(data2.weather[0].description);
-	        $weatherIcon.attr("src", "https://openweathermap.org/img/w/" + iconCode + ".png");
+	        $weatherIcon.attr("src", "http://openweathermap.org/img/w/" + iconCode + ".png");
 
 	        // change units on click of the buttons
 	        $degCButton.on('click', function(){
