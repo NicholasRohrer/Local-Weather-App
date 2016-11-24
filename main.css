@@ -1,5 +1,5 @@
 body {
-    background-color: #009688;
+    background-color: #0E0B16;
 }
 
 .buttons {
@@ -9,13 +9,13 @@ body {
 }
 
 .text {
-    color: #E0F2F1;
+    color: #E7DFDD;
     margin-top: 50px;
     margin-bottom: 30px;
 }
 
 .credits {
-    color: #A7FFEB;
+    color: #E7DFDD;
 }
 
 #weatherIcon {
