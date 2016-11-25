@@ -15,6 +15,7 @@ var degC = 0;
 var lat = 0;
 var lon = 0;
 var iconCode = 0;
+var key = 'ee7f8c5319292e0f2d3c2a15f2e0327e';
 
 // if unit = 0, unit is degrees F. unit = 1 = degrees C
 var unit = 0;
@@ -36,6 +37,14 @@ function getCoords(position) {
 	lon = position.coords.latitude;
 	console.log(lat);
 	console.log(lon);
+
+
+
+	$.getJSON('https://api.darksky.net/forecast/' + key + '/' + lat + ',' + lon, function(data){
+		console.log(data);
+	})
+
+
 }
 
 
