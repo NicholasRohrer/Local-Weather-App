@@ -40,7 +40,7 @@ function getCoords(position) {
 
 
 
-	$.getJSON('https://api.darksky.net/forecast/' + key + '/' + lat + ',' + lon, function(data){
+	$.getJSON('https://api.darksky.net/forecast/' + key + '/' + lat + ',' + lon + '?callback=?', function(data){
 		console.log(data);
 	})
 
