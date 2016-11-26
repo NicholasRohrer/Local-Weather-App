@@ -12,6 +12,7 @@ body {
     color: #E7DFDD;
     margin-top: 50px;
     margin-bottom: 30px;
+    display: none;
 }
 
 .credits {

@@ -20,6 +20,13 @@ var key = 'ee7f8c5319292e0f2d3c2a15f2e0327e';
 // if unit = 0, unit is degrees F. unit = 1 = degrees C
 var unit = 0;
 
+
+$.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?', function(location) {
+	console.log(location);
+}) 
+
+
+/*
 // get user lat and long
 var loc = document.getElementById('myloc');
 
@@ -46,6 +53,8 @@ function getCoords(position) {
 
 
 }
+
+*/
 
 
 
