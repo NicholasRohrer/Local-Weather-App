@@ -9,22 +9,28 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 	<!-- css file -->
 	<link rel="stylesheet" type="text/css" href="../Local-Weather-App/main.css">
-    <!--
-    <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
-    -->
 </head>
 <body>
+
+
 <!-- buttons -->
+<!--
 <div class="row">
     <div class="buttons">
         <button class="btn btn-primary" id="degC">&deg C</button>
         <button class="btn btn-primary" id="degF">&deg F</button>
     </div>
 </div>
+-->
+
+<div class="text-center title-section">
+    <h1 id="title">Local Weather</h1>
+    <i class="fa fa-bolt fa-5x btn" aria-hidden="true"></i>
+    <p>Get My Weather!</p>
+</div>
     
 <!--all text for weather-->
 <div class="text-center container text">
-    <h1 id="title">Local Weather App</h1>
     <h2><span id="city"></span><span id="state"></span></h2>
     <h2 id="temp"></h2>
     <h2 id="weather"></h2>
@@ -34,13 +40,10 @@
 <!-- credits -->
 <div class="text-center container credits">
     <p>Developed by Nicholas Rohrer</p>
-    <p>Weather API powered by <a target="_blank" href="https://openweathermap.org/">Open Weather Map</a>
+    <a target="_blank" href="https://darksky.net/poweredby/"><img src="https://darksky.net/dev/img/attribution/poweredby-oneline-darkbackground.png" id="DarkSky" class="img-responsive"></a>
 </div>
 
 
-
-<button onclick="myLocation()"> Click to get Location </button>
-<p id="myloc"></p>
  
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
