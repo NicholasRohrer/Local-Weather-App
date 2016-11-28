@@ -20,9 +20,20 @@ var key = 'ee7f8c5319292e0f2d3c2a15f2e0327e';
 // if unit = 0, unit is degrees F. unit = 1 = degrees C
 var unit = 0;
 
-
+// grabbing user location info
 $.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?', function(location) {
 	console.log(location);
+	$myCity.html(location.city);
+	$myState.html(location.state);
+
+	// set lat and lon for Dark Sky call
+	lat = location.latitude;
+	lon = location.longitude;
+
+	// Dark Sky API call
+	$.getJSON('https://api.darksky.net/forecast/' + key + '/' + lat + ',' + lon + '?callback=?', function(data){
+		console.log(data);
+	})
 }) 
 
 
