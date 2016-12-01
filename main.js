@@ -3,11 +3,11 @@ $( document ).ready();
 // cache the DOM
 var $myCity = $('#city');
 var $myState = $('#state');
-var $myTemp = $('#temp');
-var $myWeather = $('#weather');
+//var $myTemp = $('#temp');
+//var $myWeather = $('#weather');
 var $degFButton = $('#degF');
 var $degCButton = $('#degC');
-var $weatherIcon = $('#weatherIcon');
+//var $weatherIcon = $('#weatherIcon');
 
 // variables
 var degF = 0;	
