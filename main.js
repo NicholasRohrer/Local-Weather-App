@@ -3,11 +3,11 @@ $( document ).ready();
 // cache the DOM
 var $myCity = $('#city');
 var $myState = $('#state');
-//var $myTemp = $('#temp');
-//var $myWeather = $('#weather');
 var $degFButton = $('#degF');
 var $degCButton = $('#degC');
-//var $weatherIcon = $('#weatherIcon');
+var $currentTemp = $('#currentTemp');
+
+
 
 // variables
 var degF = 0;	
@@ -33,6 +33,10 @@ $.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?', function(location) {
 	// Dark Sky API call
 	$.getJSON('https://api.darksky.net/forecast/' + key + '/' + lat + ',' + lon + '?callback=?', function(data){
 		console.log(data);
+
+		// display for current weather tab
+		$currentTemp.html(data.currently['temperature']);
+
 	})
 }) 
 

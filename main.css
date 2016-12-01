@@ -21,6 +21,12 @@ body {
     margin-bottom: 10px;
 }
 
+.tab-content {
+    color: #E7DFDD;
+    margin-top: 10px;
+    font-size: 2.5em;
+}
+
 
 .buttons {
     float: right;
