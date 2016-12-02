@@ -6,7 +6,12 @@ var $myState = $('#state');
 var $degFButton = $('#degF');
 var $degCButton = $('#degC');
 var $currentTemp = $('#currentTemp');
-
+var $currentDewpoint = $('#currentDewpoint');
+var $currentHumidity = $('#currentHumidity');
+var $currentPrecipProb = $('#currentPrecipProb');
+var $currentPressure = $('#currentPressure');
+var $currentWindSpeed = $('#currentWindSpeed');
+var $currentWindBearing = $('#currentWindBearing');
 
 
 // variables
@@ -15,7 +20,7 @@ var degC = 0;
 var lat = 0;
 var lon = 0;
 var iconCode = 0;
-var key = 'ee7f8c5319292e0f2d3c2a15f2e0327e';
+const KEY = 'ee7f8c5319292e0f2d3c2a15f2e0327e';
 
 // if unit = 0, unit is degrees F. unit = 1 = degrees C
 var unit = 0;
@@ -31,11 +36,18 @@ $.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?', function(location) {
 	lon = location.longitude;
 
 	// Dark Sky API call
-	$.getJSON('https://api.darksky.net/forecast/' + key + '/' + lat + ',' + lon + '?callback=?', function(data){
+	$.getJSON('https://api.darksky.net/forecast/' + KEY + '/' + lat + ',' + lon + '?callback=?', function(data){
 		console.log(data);
 
-		// display for current weather tab
+		// current weather tab
 		$currentTemp.html(data.currently['temperature']);
+		$currentDewpoint.html(data.currently['dewPoint']);
+		$currentHumidity.html(data.currently['humidity']);
+		$currentPrecipProb.html(data.currently['precipProbability']);
+		$currentPressure.html(data.currently['pressure']);
+		$currentWindSpeed.html(data.currently['windSpeed']);
+		$currentWindBearing.html(data.currently['windBearing']);
+
 
 	})
 }) 
@@ -121,20 +133,5 @@ function getCoords(position) {
 
 // run the APIs when the page loads
 getLoc();
-
-var loc = document.getElementById('myloc');
-
-function myLocation() {
-	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(showPosition);
-	}
-	else {
-		loc.innerHTML = "Location Tracking not Possible";
-	}
-}
-
-function showPosition(position) {
-	loc.innerHTML = "Longitude: " + position.coords.longitude;
-}
 
 */
