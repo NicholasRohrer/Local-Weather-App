@@ -19,6 +19,8 @@ var degF = 0;
 var degC = 0;
 var dewPointDegF = 0;
 var dewPointDegC = 0;
+var humidity = 0;
+var precipChance = 0;
 var lat = 0;
 var lon = 0;
 var iconCode = 0;
@@ -41,20 +43,24 @@ $.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?', function(location) {
 	$.getJSON('https://api.darksky.net/forecast/' + KEY + '/' + lat + ',' + lon + '?callback=?', function(data){
 		console.log(data);
 
-		// current weather tab
+		// current weather tab unit manipulation
 		degF = data.currently['temperature'];
 		degC = convertToCelsius(degF);
 
 		dewPointDegF = data.currently['dewPoint'];
 		dewPointDegC = convertToCelsius(dewPointDegF);
 
+		humidity = data.currently['humidity'] * 100;
+		precipChance = data.currently['precipProbability'] * 100;
+
+		// display current weather tab
 		$currentTemp.html(degF + ' &degF');
 		$currentDewpoint.html(dewPointDegF + ' &degF');
-		$currentHumidity.html(data.currently['humidity']);
-		$currentPrecipProb.html(data.currently['precipProbability']);
-		$currentPressure.html(data.currently['pressure']);
-		$currentWindSpeed.html(data.currently['windSpeed']);
-		$currentWindBearing.html(data.currently['windBearing']);
+		$currentHumidity.html(humidity + '%');
+		$currentPrecipProb.html(precipChance + '%');
+		$currentPressure.html(data.currently['pressure'] + ' mb');
+		$currentWindSpeed.html(data.currently['windSpeed'] + ' knots');
+		$currentWindBearing.html(data.currently['windBearing'] + '&deg');
 
 		// change units on click of the buttons
 	    $degCButton.on('click', function(){
