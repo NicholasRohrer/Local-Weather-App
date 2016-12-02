@@ -17,6 +17,8 @@ var $currentWindBearing = $('#currentWindBearing');
 // variables
 var degF = 0;	
 var degC = 0;
+var dewPointDegF = 0;
+var dewPointDegC = 0;
 var lat = 0;
 var lon = 0;
 var iconCode = 0;
@@ -40,48 +42,42 @@ $.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?', function(location) {
 		console.log(data);
 
 		// current weather tab
-		$currentTemp.html(data.currently['temperature']);
-		$currentDewpoint.html(data.currently['dewPoint']);
+		degF = data.currently['temperature'];
+		degC = convertToCelsius(degF);
+
+		dewPointDegF = data.currently['dewPoint'];
+		dewPointDegC = convertToCelsius(dewPointDegF);
+
+		$currentTemp.html(degF + ' &degF');
+		$currentDewpoint.html(dewPointDegF + ' &degF');
 		$currentHumidity.html(data.currently['humidity']);
 		$currentPrecipProb.html(data.currently['precipProbability']);
 		$currentPressure.html(data.currently['pressure']);
 		$currentWindSpeed.html(data.currently['windSpeed']);
 		$currentWindBearing.html(data.currently['windBearing']);
 
+		// change units on click of the buttons
+	    $degCButton.on('click', function(){
+	    	if (unit === 0) {
+	        	unit = 1;
+	        	$currentTemp.html(degC + ' &degC');
+	        	$currentDewpoint.html(dewPointDegC + ' &degC');
+	        }
+	    });
 
+	    $degFButton.on('click', function(){
+	        if (unit === 1) {
+	        	unit = 0;
+	        	$currentTemp.html(degF + ' &degF');
+	        	$currentDewpoint.html(dewPointDegF + ' &degF');
+	        }
+	    });
 	})
-}) 
+})
 
-
-/*
-// get user lat and long
-var loc = document.getElementById('myloc');
-
-function myLocation() {
-	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(getCoords);
-	}
-	else {
-		loc.innerHTML = "Location Tracking not Possible";
-	}
-}
-
-function getCoords(position) {
-	lat = position.coords.longitude;
-	lon = position.coords.latitude;
-	console.log(lat);
-	console.log(lon);
-
-
-
-	$.getJSON('https://api.darksky.net/forecast/' + key + '/' + lat + ',' + lon + '?callback=?', function(data){
-		console.log(data);
-	})
-
-
-}
-
-*/
+function convertToCelsius(temp) {
+	return Math.ceil(((temp - 32) * (5/9)));
+} 
 
 
 
