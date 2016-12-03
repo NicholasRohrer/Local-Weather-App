@@ -47,7 +47,9 @@ body {
     margin-top: 100px;
 }
 
-#weatherIcon {
-	height: 5em;
-	width: 5em;
+#DarkSky {
+    width: 300px;
+    height: auto;
 }
+
+
