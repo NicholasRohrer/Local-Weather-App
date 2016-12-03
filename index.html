@@ -3,6 +3,7 @@
 <head>
 	<title>Local Weather App</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<!-- font awesome -->
@@ -12,16 +13,6 @@
 </head>
 <body>
 
-
-<!-- buttons -->
-<!--
-<div class="row">
-    <div class="buttons">
-        <button class="btn btn-primary" id="degC">&deg C</button>
-        <button class="btn btn-primary" id="degF">&deg F</button>
-    </div>
-</div>
--->
 
 <div class="text-center title-section">
     <h1 id="title">Local Weather</h1>
@@ -65,8 +56,10 @@
         </div>
       </div>
       <div id="menu2" class="tab-pane fade">
-        <h3>Menu 2</h3>
-        <p>Some content in menu 2.</p>
+        <div class="container text-center">
+            <p class="underline">For the Week</p>
+            <p><span id="weekWeather"></span></p>
+        </div>
       </div>
 </div>
 </div>

@@ -14,6 +14,7 @@ var $currentWindSpeed = $('#currentWindSpeed');
 var $currentWindBearing = $('#currentWindBearing');
 var $minWeather = $('#minWeather');
 var $dailyWeather = $('#dailyWeather');
+var $weekWeather = $('#weekWeather');
 
 
 // variables
@@ -84,6 +85,9 @@ $.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?', function(location) {
 	    // display hourly weather tab
 	    $minWeather.html(data.minutely['summary']);
 	    $dailyWeather.html(data.hourly['summary']);
+
+	    // display weekly weather tab
+	    $weekWeather.html(data.daily['summary']);
 	})
 })
 
