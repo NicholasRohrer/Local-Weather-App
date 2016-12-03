@@ -12,6 +12,8 @@ var $currentPrecipProb = $('#currentPrecipProb');
 var $currentPressure = $('#currentPressure');
 var $currentWindSpeed = $('#currentWindSpeed');
 var $currentWindBearing = $('#currentWindBearing');
+var $minWeather = $('#minWeather');
+var $dailyWeather = $('#dailyWeather');
 
 
 // variables
@@ -78,6 +80,10 @@ $.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?', function(location) {
 	        	$currentDewpoint.html(dewPointDegF + ' &degF');
 	        }
 	    });
+
+	    // display hourly weather tab
+	    $minWeather.html(data.minutely['summary']);
+	    $dailyWeather.html(data.hourly['summary']);
 	})
 })
 
