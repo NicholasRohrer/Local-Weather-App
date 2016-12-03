@@ -15,6 +15,9 @@ var $currentWindBearing = $('#currentWindBearing');
 var $minWeather = $('#minWeather');
 var $dailyWeather = $('#dailyWeather');
 var $weekWeather = $('#weekWeather');
+var $hideWeather = $('#hideWeather');
+var $fadeThis = $('.fadeThis');
+var $getWeatherBtn = $('#getWeatherBtn');
 
 
 // variables
@@ -31,6 +34,16 @@ const KEY = 'ee7f8c5319292e0f2d3c2a15f2e0327e';
 
 // if unit = 0, unit is degrees F. unit = 1 = degrees C
 var unit = 0;
+
+
+function convertToCelsius(temp) {
+	return Math.ceil(((temp - 32) * (5/9)));
+}
+
+function toggleWeather() {
+	$fadeThis.fadeOut(200);
+	$hideWeather.slideToggle(300);
+} 
 
 // grabbing user location info
 $.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?', function(location) {
@@ -91,11 +104,8 @@ $.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?', function(location) {
 	})
 })
 
-function convertToCelsius(temp) {
-	return Math.ceil(((temp - 32) * (5/9)));
-} 
-
-
+// display weather on click of getWeatherBtn
+$getWeatherBtn.on('click', toggleWeather);
 
 // get user's city, state, and lat and long
 /*function getLoc() {
