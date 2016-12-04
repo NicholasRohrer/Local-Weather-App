@@ -41,7 +41,6 @@ function convertToCelsius(temp) {
 }
 
 function toggleWeather() {
-	$fadeThis.fadeOut(200);
 	$hideWeather.slideToggle(300);
 } 
 
