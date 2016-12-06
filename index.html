@@ -3,7 +3,7 @@
 <head>
 	<title>Local Weather App</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<!-- font awesome -->
@@ -55,37 +55,76 @@
     </div>
 
     <div class="tab-content">
-      <div id="home" class="tab-pane fade in active">
-        <div class="container text-center">
-            <div class="row">
-                <div class="buttons">
-                    <p><span class="btn" id="degC">&deg C</span> | <span class="btn" id="degF">&deg F</span></p>
+        <!-- Current Weather Tab -->
+        <div id="home" class="tab-pane fade in active">
+            <div class="container-fluid text-center">
+                <div class="row">
+                    <div class="buttons col-xs-8 col-xs-offset-2">
+                        <p><span class="btn" id="degC">&deg C</span> | <span class="btn" id="degF">&deg F</span></p>
+                    </div>
+                </div>
+
+                <!-- Current weather data -->
+                <div class="row">
+                    <div class="col-xs-8 col-xs-offset-2">
+                        <p>Temperature: <span id="currentTemp"></span></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-8 col-xs-offset-2">
+                        <p>Dewpoint: <span id="currentDewpoint"></span></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-8 col-xs-offset-2">
+                        <p>Humidity: <span id="currentHumidity"></span></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-8 col-xs-offset-2">
+                        <p>Chance of Precipitation: <span id="currentPrecipProb"></span></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-8 col-xs-offset-2">
+                        <p>Pressure: <span id="currentPressure"></span></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-8 col-xs-offset-2">
+                        <p>Wind Speed: <span id="currentWindSpeed"></span></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-8 col-xs-offset-2">
+                        <p>Wind Bearing: <span id="currentWindBearing"></span></p>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <p>Temperature: <span id="currentTemp"></span></p>
-            <p>Dewpoint: <span id="currentDewpoint"></span></p>
-            <p>Humidity: <span id="currentHumidity"></span></p>
-            <p>Chance of Precipitation: <span id="currentPrecipProb"></span></p>
-            <p>Pressure: <span id="currentPressure"></span></p>
-            <p>Wind Speed: <span id="currentWindSpeed"></span></p>
-            <p>Wind Bearing: <span id="currentWindBearing"></span></p>
+
+        <div id="menu1" class="tab-pane fade">
+            <div class="container text-center">
+                <p class="underline">For the Hour</p>
+                <p><span id="minWeather"></span></p>
+                <p class="underline">For the Day</p>
+                <p><span id="dailyWeather"></span></p>
+            </div>
         </div>
-      </div>
-      <div id="menu1" class="tab-pane fade">
-        <div class="container text-center">
-            <p class="underline">For the Hour</p>
-            <p><span id="minWeather"></span></p>
-            <p class="underline">For the Day</p>
-            <p><span id="dailyWeather"></span></p>
+
+        <div id="menu2" class="tab-pane fade">
+            <div class="container text-center">
+                <p class="underline">For the Week</p>
+                <p><span id="weekWeather"></span></p>
+            </div>
         </div>
-      </div>
-      <div id="menu2" class="tab-pane fade">
-        <div class="container text-center">
-            <p class="underline">For the Week</p>
-            <p><span id="weekWeather"></span></p>
-        </div>
-      </div>
     </div>
 </div>
 
