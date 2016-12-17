@@ -17,7 +17,7 @@ body {
 }
 
 .fa-bolt {
-    color: #E7DFDD;
+    color: #4717F6;
     margin-bottom: 10px;
     margin-top: 40px;
 }
@@ -28,8 +28,12 @@ body {
     font-size: 2.5em;
 }
 
+h4 {
+    color: #4717F6;
+}
 
 .buttons {
+    color: #E7DFDD;
     margin-top: 10px;
     margin-bottom: 10px;
 }
