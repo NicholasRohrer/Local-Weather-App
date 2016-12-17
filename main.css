@@ -8,7 +8,7 @@ body {
     margin-top: 100px;
     margin-bottom: 30px;
     font-size: 5em;
-    font-weight:;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .title-section {
@@ -22,20 +22,27 @@ body {
     margin-top: 40px;
 }
 
+.getWeatherMessage {
+    font-family: 'Orbitron', sans-serif;
+}
+
 .tab-content {
     color: #E7DFDD;
     margin-top: 10px;
     font-size: 2.5em;
+    font-family: 'Lato', sans-serif;
 }
 
 h4 {
     color: #4717F6;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .buttons {
     color: #E7DFDD;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .text {
@@ -49,6 +56,7 @@ h4 {
     color: #E7DFDD;
     font-size: 1.5em;
     margin-top: 50px;
+    font-family: 'Lato', sans-serif;
 }
 
 #DarkSky {
