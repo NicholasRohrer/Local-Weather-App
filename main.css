@@ -34,6 +34,10 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+.nav {
+    margin-top: 100px; 
+}
+
 h4 {
     color: #4717F6;
     font-family: 'Orbitron', sans-serif;
@@ -90,7 +94,7 @@ h4 {
 
     .nav {
         margin-top: 10px;
-        font-size: 70%
+        font-size: 50%
     }
 
     .tab-content {
@@ -110,12 +114,12 @@ h4 {
         font-family: 'Lato', sans-serif;
     }
 
-#DarkSky {
-    height: auto; 
-    width: auto; 
-    max-width: 300px; 
-    max-height: 300px; 
-    
-}
+    #DarkSky {
+        height: auto; 
+        width: auto; 
+        max-width: 300px; 
+        max-height: 300px; 
+        
+    }
 }
 

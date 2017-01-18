@@ -38,9 +38,13 @@ function convertToCelsius(temp) {
 }
 
 function toggleWeather() {
-	$('#getWeatherBtn').fadeOut();
-	$('#getWeatherMessage').fadeOut();
-	$hideWeather.fadeIn(500);
+	$('#getWeatherBtn').fadeOut(500);
+
+	$('#getWeatherMessage').fadeOut(500, function() {
+		$hideWeather.fadeIn(2000);
+	});
+	
+	
 } 
 
 // grabbing user location info
