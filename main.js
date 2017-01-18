@@ -43,7 +43,7 @@ function toggleWeather() {
 
 // grabbing user location info
 $.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?', function(location) {
-	console.log(location);
+	//console.log(location);
 	$myCity.html(location.city);
 	$myState.html(location.state);
 
@@ -53,7 +53,7 @@ $.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?', function(location) {
 
 	// Dark Sky API call
 	$.getJSON('https://api.darksky.net/forecast/' + KEY + '/' + lat + ',' + lon + '?callback=?', function(data){
-		console.log(data);
+		//console.log(data);
 
 		// current weather tab unit manipulation
 		degF = data.currently['temperature'];
