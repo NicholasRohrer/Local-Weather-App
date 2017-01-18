@@ -21,7 +21,7 @@ body {
     color: white;
 }
 
-.getWeatherMessage {
+#getWeatherMessage {
     color: #E7DFDD;
     font-family: 'Orbitron', sans-serif;
     font-size: 2em;
@@ -84,7 +84,7 @@ h4 {
         font-size: 7em;
     }
 
-    .getWeatherMessage {
+    #getWeatherMessage {
         font-size: 100%;
     }
 
@@ -93,40 +93,28 @@ h4 {
         font-size: 70%
     }
 
-.tab-content {
-    color: #E7DFDD;
-    margin-top: 10px;
-    font-size: 2.5em;
-    font-family: 'Lato', sans-serif;
-}
+    .tab-content {
+        
+        margin-top: 10px;
+        font-size: 1.5em;
+        font-family: 'Lato', sans-serif;
+    }
 
-h4 {
-    color: #4717F6;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.5em;
-}
+    .buttons {
+        font-size: 2em;
+    }
 
-.buttons {
-    color: #E7DFDD;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.5em;
-}
-
-.credits {
-    color: #E7DFDD;
-    font-size: 1.5em;
-    margin-top: 100px;
-    font-family: 'Lato', sans-serif;
-}
+    .credits {
+        
+        font-size: 100%;
+        font-family: 'Lato', sans-serif;
+    }
 
 #DarkSky {
-    font-size: 1.5em;
     height: auto; 
     width: auto; 
-    max-width: 400px; 
-    max-height: 400px; 
+    max-width: 300px; 
+    max-height: 300px; 
     
 }
 }
