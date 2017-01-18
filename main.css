@@ -6,14 +6,8 @@ body {
 #title {
     color: #E7DFDD;
     margin-top: 100px;
-    margin-bottom: 30px;
     font-size: 5em;
     font-family: 'Orbitron', sans-serif;
-}
-
-.title-section {
-    color: #E7DFDD;
-    margin-bottom: 50px;
 }
 
 .fa-bolt {
@@ -28,13 +22,14 @@ body {
 }
 
 .getWeatherMessage {
+    color: #E7DFDD;
     font-family: 'Orbitron', sans-serif;
     font-size: 2em;
 }
 
 .tab-content {
     color: #E7DFDD;
-    margin-top: 10px;
+    margin-top: 30px;
     font-size: 2.5em;
     font-family: 'Lato', sans-serif;
 }
@@ -75,5 +70,64 @@ h4 {
 
 #hideWeather {
     display: none;
+}
+
+/* Active for anything smaller than 532 px, phone sized */
+@media screen and (max-width: 532px){
+    #title {
+        font-size: 1.5em;
+    }
+
+
+    .fa-bolt {
+        margin-top: 10px;
+        font-size: 7em;
+    }
+
+    .getWeatherMessage {
+        font-size: 100%;
+    }
+
+    .nav {
+        margin-top: 10px;
+        font-size: 70%
+    }
+
+.tab-content {
+    color: #E7DFDD;
+    margin-top: 10px;
+    font-size: 2.5em;
+    font-family: 'Lato', sans-serif;
+}
+
+h4 {
+    color: #4717F6;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5em;
+}
+
+.buttons {
+    color: #E7DFDD;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5em;
+}
+
+.credits {
+    color: #E7DFDD;
+    font-size: 1.5em;
+    margin-top: 100px;
+    font-family: 'Lato', sans-serif;
+}
+
+#DarkSky {
+    font-size: 1.5em;
+    height: auto; 
+    width: auto; 
+    max-width: 400px; 
+    max-height: 400px; 
+    
+}
 }
 

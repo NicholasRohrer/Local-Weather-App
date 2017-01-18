@@ -38,7 +38,7 @@ function convertToCelsius(temp) {
 }
 
 function toggleWeather() {
-	$hideWeather.slideToggle(300);
+	$hideWeather.slideToggle(500);
 } 
 
 // grabbing user location info
