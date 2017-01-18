@@ -76,12 +76,11 @@ h4 {
     display: none;
 }
 
-/* Active for anything smaller than 532 px, phone sized */
-@media screen and (max-width: 532px){
+/* Active for anything smaller than 760 px width, smaller than tablet sized */
+@media screen and (max-width: 760px) {
     #title {
         font-size: 1.5em;
     }
-
 
     .fa-bolt {
         margin-top: 10px;
@@ -98,7 +97,6 @@ h4 {
     }
 
     .tab-content {
-        
         margin-top: 10px;
         font-size: 1.5em;
         font-family: 'Lato', sans-serif;
@@ -109,17 +107,12 @@ h4 {
     }
 
     .credits {
-        
         font-size: 100%;
-        font-family: 'Lato', sans-serif;
     }
 
-    #DarkSky {
-        height: auto; 
-        width: auto; 
+    #DarkSky { 
         max-width: 300px; 
         max-height: 300px; 
-        
     }
 }
 

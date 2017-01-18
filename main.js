@@ -42,15 +42,13 @@ function toggleWeather() {
 
 	$('#getWeatherMessage').fadeOut(500, function() {
 		$hideWeather.fadeIn(2000);
-	});
-	
-	
+	});	
 } 
 
 // grabbing user location info
 $.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?', function(location) {
 	//console.log(location);
-	$myCity.html(location.city);
+	$myCity.html(location.city + ", ");
 	$myState.html(location.state);
 
 	// set lat and lon for Dark Sky call
