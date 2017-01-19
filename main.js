@@ -44,6 +44,16 @@ function toggleWeather() {
 	$('#getWeatherMessage').fadeOut(500, function() {
 		$hideWeather.fadeIn(2000);
 	});	
+}
+
+function toggleInputForm() {
+	$('#getWeatherBtn').fadeOut(500);
+	$wrongLocation.fadeOut(500);
+
+	$('#getWeatherMessage').fadeOut(500, function() {
+		$('form').fadeToggle(400);
+	});	
+	
 } 
 
 // grabbing user location info
@@ -107,3 +117,6 @@ $.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?', function(location) {
 
 // display weather on click of getWeatherBtn
 $getWeatherBtn.on('click', toggleWeather);
+
+// display input form on click of wrong location message
+$wrongLocation.on('click', toggleInputForm);
