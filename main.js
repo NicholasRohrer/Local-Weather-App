@@ -33,11 +33,12 @@ var iconCode = 0;
 const KEY = 'ee7f8c5319292e0f2d3c2a15f2e0327e';
 var unit = 0; // if unit = 0, unit is degrees F. unit = 1 = degrees C
 
-
+// converts degrees F to degrees C
 function convertToCelsius(temp) {
 	return Math.ceil(((temp - 32) * (5/9)));
 }
 
+// hides bolt and get weather message, then displays weather info for city
 function toggleWeather() {
 	$('#getWeatherBtn').fadeOut(500);
 
@@ -46,6 +47,7 @@ function toggleWeather() {
 	});	
 }
 
+// hides bolt and get weather message, then displays input form
 function toggleInputForm() {
 	$('#getWeatherBtn').fadeOut(500);
 	$wrongLocation.fadeOut(500);
@@ -115,8 +117,23 @@ $.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?', function(location) {
 	})
 })
 
+//
+geocoder = new google.maps.Geocoder();
+address = "Dallas, Texas"
+var coordinates;
+function getCoordinates(address,callback) {
+	geocoder.geocoder({address: address}, function(results, status) {
+		coordinates = results[0].geometry.location;
+		callback(coordinates, function(){
+			console.log(coordinates);
+		});
+	})
+}
+
 // display weather on click of getWeatherBtn
 $getWeatherBtn.on('click', toggleWeather);
 
 // display input form on click of wrong location message
 $wrongLocation.on('click', toggleInputForm);
+
+getCoordinates();
