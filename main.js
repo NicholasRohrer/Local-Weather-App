@@ -18,6 +18,7 @@ var $weekWeather = $('#weekWeather');
 var $hideWeather = $('#hideWeather');
 var $fadeThis = $('.fadeThis');
 var $getWeatherBtn = $('#getWeatherBtn');
+var $wrongLocation = $('#wrongLocation');
 
 // variables
 var degF = 0;	

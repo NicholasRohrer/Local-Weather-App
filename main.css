@@ -27,6 +27,21 @@ body {
     font-size: 2em;
 }
 
+#wrongLocation {
+    color: #E7DFDD;
+    font-family: 'Lato', sans-serif;
+}
+
+label {
+    color: #E7DFDD;
+    font-family: 'Lato', sans-serif;
+}
+
+form {
+    margin-top: 10px;
+    display: none;
+}
+
 .tab-content {
     color: #E7DFDD;
     margin-top: 30px;
@@ -91,9 +106,13 @@ h4 {
         font-size: 100%;
     }
 
+    #wrongLocation {
+    font-size: 50%;
+}
+
     .nav {
         margin-top: 10px;
-        font-size: 50%
+        font-size: 70%
     }
 
     .tab-content {
