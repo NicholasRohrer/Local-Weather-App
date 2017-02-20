@@ -7,3 +7,4 @@ Local weather web application. User location is retrieved from IP address. Click
 
 Need to add "Search for any City feature". User will input city and state if they don't want to use IP location services.
 Need to clean up presentation of overall application.
+Need to fix display text for when city is not located.
