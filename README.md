@@ -1,4 +1,4 @@
-# Local-Weather-App
+# Local-Weather
 Local Weather App
 
 Website - https://nicholasrohrer.github.io/Local-Weather-App/
